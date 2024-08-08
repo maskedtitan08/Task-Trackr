@@ -1,0 +1,24 @@
+'use client';
+import { useOthers } from "@/app/liveblocks.config";
+import { shallow } from "@liveblocks/core";
+
+export default function PresenceAvatars({
+  presenceKey, presenceValue
+}) {
+
+  const others = useOthers(users => {
+    return users.filter(u => u.presence?.[presenceKey] === presenceValue);
+  }, shallow);
+
+  return (
+    <div className="flex gap-1">
+      {others.map(user => (
+        <div key={user.id}>
+          <img
+            className="size-8 rounded-full"
+            src={user.info.image} alt="avatar"/>
+        </div>
+      ))}
+    </div>
+  );
+}
