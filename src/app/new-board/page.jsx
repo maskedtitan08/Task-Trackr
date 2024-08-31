@@ -24,7 +24,7 @@ export default function NewBoardPage() {
   }
 
   return (
-    <div>
+    <div className="m-7">
       <form onSubmit={handleNewBoardSubmit} className="max-w-xs block">
         <h1 className="text-2xl mb-4">Create new board</h1>
         <input
@@ -34,7 +34,7 @@ export default function NewBoardPage() {
           value={boardName}
           onChange={handleInputChange}
         />
-        <button type="submit" className="mt-2 w-full">Create board</button>
+        <button type="submit" className="bg-[#4A5696] text-white p-2 px-4 border-2 rounded-xl mt-4 w-full">Create board</button>
       </form>
     </div>
   );

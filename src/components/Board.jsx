@@ -10,6 +10,7 @@ import { ClientSideSuspense } from "@liveblocks/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import Loader from "@/components/Loader";
 
 export default function Board({ id, name }) {
   const [renameMode, setRenameMode] = useState(false);
@@ -49,27 +50,35 @@ export default function Board({ id, name }) {
           cards: new LiveList([]),
         }}
       >
-        <ClientSideSuspense fallback={<div>Loading...</div>}>
+        <ClientSideSuspense fallback={<Loader />}>
           {() => (
             <>
-              <div className="flex gap-2 justify-between items-center mb-4">
-                <div>
-                  {!renameMode && (
-                    <h1
-                      className="text-2xl"
-                      onClick={() => setRenameMode(true)}
-                    >
-                      Board: {name}
-                    </h1>
-                  )}
-                  {renameMode && (
-                    <form onSubmit={handleNameSubmit}>
+              <div className="flex gap-2 justify-between items-center m-7 ">
+                <div className="flex items-center gap-2">
+                  {!renameMode ? (
+                    <>
+                      <h1 className="text-2xl">Board: {name}</h1>
+                      <button
+                        className="text-[#4A5696] m-2 hover:underline"
+                        onClick={() => setRenameMode(true)}
+                      >
+                        Edit
+                      </button>
+                    </>
+                  ) : (
+                    <form onSubmit={handleNameSubmit} className="flex items-center gap-2">
                       <input type="text" defaultValue={name} />
+                      <button
+                        type="submit"
+                        className="text-[#4A5696] m-2 hover:underline"
+                      >
+                        Done
+                      </button>
                     </form>
                   )}
                 </div>
                 <Link
-                  className="flex gap-2 items-center btn"
+                  className="flex gap-1 items-center btn"
                   href={`/boards/${id}/settings`}
                 >
                   <FontAwesomeIcon icon={faCog} />

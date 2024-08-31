@@ -35,6 +35,7 @@
     "postcss-nesting": "^12.1.5",
     "react": "^18",
     "react-dom": "^18",
+    "react-loader-spinner": "^6.1.6",
     "react-sortablejs": "^6.1.4",
     "sortablejs": "^1.15.2",
     "uniqid": "^5.4.0",

@@ -13,7 +13,7 @@ export default function BoardsTiles({ boards }) {
             href={`/boards/${board.id}`}
             key={board.id}
           >
-            <div className="bg-gray-200 px-8 py-12 rounded-md block relative">
+            <div className="bg-[#dfe4fe] text-2xl px-8 py-12 rounded-md block relative">
               {board.metadata.boardName}
               <RoomProvider id={board.id} initialPresence={{}}>
                 <div className="absolute bottom-1 right-1">

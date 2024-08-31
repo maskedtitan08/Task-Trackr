@@ -23,9 +23,9 @@ export default function Card({ id, name }) {
   return (
     <Link
       href={`/boards/${params.boardId}/cards/${id}`}
-      className="relative border block bg-white my-2 py-8 px-4 rounded-md"
+      className="relative border block bg-white my-2 py-8 px-4 rounded-md border-2 border-[#4A5696]"
     >
-      <span>{name}</span>
+      <span className="block break-words">{name}</span>
       <div className="absolute bottom-1 right-1">
         <PresenceAvatars presenceKey={'cardId'} presenceValue={id} />
       </div>

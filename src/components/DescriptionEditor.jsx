@@ -34,7 +34,7 @@ export default function DescriptionEditor({ doc, provider, cardId }) {
   });
 
   return (
-    <div>
+    <div className="m-2 p-2">
       <div className="flex gap-1 mb-1 mt-2 editor-buttons">
         <button
           className={editor?.isActive('bold') ? 'active' : ''}

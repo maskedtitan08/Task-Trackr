@@ -32,20 +32,20 @@ export default function Columns() {
   }
 
   return (
-    <div className="flex gap-4">
+    <div className="m-7">
+      <NewColumnForm />
       <ReactSortable
         group={"board-column"}
         list={columns}
-        className="flex gap-4"
+        className="flex flex-wrap gap-4"
         ghostClass="opacity-40"
         setList={setColumnsOrder}
       >
         {columns.length > 0 &&
           columns.map((column) => (
-            <BoardColumn key={column.id} id={column.id} name={column.name} />
+            <BoardColumn key={column.id} id={column.id} name={column.name} className="w-[300px]" />
           ))}
       </ReactSortable>
-      <NewColumnForm />
     </div>
   );
 }

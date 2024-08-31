@@ -17,7 +17,7 @@ export default async function BoardSettings({ params }) {
     return 'Access denied';
   }
   return (
-    <div>
+    <div className="m-7">
       <div className="flex justify-between">
         <Link href={`/boards/${boardId}`} className="inline-flex gap-1 items-center btn mb-4">
           <FontAwesomeIcon icon={faArrowLeft} />

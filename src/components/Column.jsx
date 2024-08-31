@@ -77,12 +77,12 @@ export default function Column({ id, name }) {
   }
 
   return (
-    <div className="w-48 bg-white shadow-sm rounded-md p-2">
+    <div className="w-80 bg-white shadow-sm rounded-md p-2">
       {!renameMode && (
         <div className="flex justify-between">
-          <h3>{name}</h3>
+          <h3 className="font-bold text-2xl">{name}</h3>
           <button className="text-gray-300" onClick={() => setRenameMode(true)}>
-            <FontAwesomeIcon icon={faEllipsis} />
+            <FontAwesomeIcon icon={faEllipsis} color="black"/>
           </button>
         </div>
       )}

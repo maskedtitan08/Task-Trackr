@@ -65,7 +65,7 @@ export default function CardModalBody() {
     <>
       {!editMode && (
         <div className="flex justify-between">
-          <h4 className="text-2xl">{card?.name}</h4>
+          <h4 className="text-2xl truncate w-3/4">{card?.name}</h4>
           <button className="text-gray-400" onClick={() => setEditMode(true)}>
             <FontAwesomeIcon icon={faEllipsis} />
           </button>
@@ -75,7 +75,7 @@ export default function CardModalBody() {
         <div>
           <form onSubmit={handleNameChangeSubmit}>
             <input type="text" defaultValue={card?.name} className="mb-2" />
-            <button type="submit" className="w-full">
+            <button type="submit" className="bg-[#4A5696] text-white p-2 px-4 border-2 rounded-xl w-full">
               Save
             </button>
           </form>

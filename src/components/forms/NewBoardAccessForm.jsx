@@ -34,7 +34,7 @@ export default function NewBoardAccess({ boardId }) {
         value={email}
         onChange={handleInputChange} 
       />
-      <button className="w-full mt-2" type="submit">Save</button>
+      <button className="w-full mt-2 bg-[#4A5696] p-2 px-4 border-2 rounder-xl " type="submit">Save</button>
     </form>
   );
 }

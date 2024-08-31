@@ -2,27 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
     background-color: #f6f7fb;
 }
 
-button[type="submit"],
+/* button[type="submit"], */
 button.primary,
-.btn{
+.btn {
     @apply bg-gray-200 text-gray-900 py-2 px-4 border border-gray-200 rounded-md;
 }
-button[type="submit"],
-.primary{
+
+/* button[type="submit"], */
+.primary {
     @apply bg-blue-500 border-blue-500 text-white;
 }
-input[type="text"]{
+
+input[type="text"] {
     @apply w-full block rounded-md;
 }
-button.btn.red{
+
+button.btn.red {
     @apply bg-red-500 text-white;
 }
+
 .btn.with-icon,
-button.with-icon{
+button.with-icon {
     @apply flex gap-2 items-center justify-center;
 }
 
@@ -55,22 +59,33 @@ button.with-icon{
     pointer-events: none;
 }
 
-.editor-buttons{
-    button{
+.editor-buttons {
+    button {
         @apply border rounded-md py-1 px-2 text-sm text-gray-700;
     }
-    button.active{
+
+    button.active {
         @apply bg-gray-200 text-gray-900;
     }
 }
 
-.tiptap{
+.tiptap {
     @apply p-2 border rounded-md;
-    &:focus-visible{
-        outline:0;
+
+    &:focus-visible {
+        outline: 0;
         @apply border-blue-500;
     }
-    h2{
+
+    h2 {
         @apply text-2xl;
     }
+}
+
+.loader {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }

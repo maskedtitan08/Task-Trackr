@@ -25,7 +25,7 @@ export default function CardModal() {
       <div className="fixed inset-0 bg-black/70 z-10">
       </div>
       <div className="absolute inset-0 z-20 flex items-center justify-center w-full" onClick={handleBackdropClick}>
-        <div className="bg-white max-w-sm my-8 px-4 p-1 mx-auto rounded-md" onClick={ev => ev.stopPropagation()}>
+        <div className="bg-white w-1/3 h-3/5 my-8 p-6 mx-auto rounded-md" onClick={ev => ev.stopPropagation()}>
           <CardModalBody />
         </div>
       </div>
