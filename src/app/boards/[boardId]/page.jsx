@@ -3,6 +3,7 @@
 import Board from "@/components/Board";
 import { liveblocksClient } from "@/lib/liveblocksClient";
 import { getUserEmail } from "@/lib/userClient";
+import AccessDenied from "@/components/views/AccessDenied"
 
 export default async function BoardPage(props) {
   const boardId = props.params.boardId;
@@ -12,7 +13,11 @@ export default async function BoardPage(props) {
   const hasAccess = userAccess && [...userAccess].includes('room:write');
   if (!hasAccess) {
     return (
-      <div>Access denied</div>
+      // <div>Access denied</div>
+      <div>
+        <AccessDenied />
+      </div>
+       
     );
   }
   return (
