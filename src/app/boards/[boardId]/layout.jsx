@@ -13,7 +13,7 @@ export default function BoardLayout({ children, modal }) {
         id={params.boardId.toString()}
         initialPresence={{}}
         initialStorage={{
-          columns: new LiveList([""]),
+          columns: new LiveList([]),
           cards: new LiveList([]),
         }}>
         {children}

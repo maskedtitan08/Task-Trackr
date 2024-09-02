@@ -7,7 +7,7 @@ import Link from "next/link";
 export default async function Header() {
   const session = await getServerSession(authOptions);         // function provided by next/auth to check wether user is logged in or not
   return (
-    <header className="bg-[#4A5696] p-4 w-full">
+    <header className="bg-[#4A5696] p-4 w-full h-16">
       <div className="flex justify-between items-center">
         <Link href="/" className="logo font-extrabold text-xl text-white">Task Trackr</Link>
         <div className="text-white">

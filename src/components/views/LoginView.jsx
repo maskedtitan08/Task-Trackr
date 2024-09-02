@@ -3,7 +3,7 @@ import { signIn } from "next-auth/react";
 
 export default function LoginView() {
   return (
-    <div className="flex">
+    <div className="flex h-[calc(100vh-4rem)]">
       <div className="w-2/3 p-5 pl-28 bg-[#dfe4fe]"><img src="/task.jpeg" width={800} ></img></div>
       <div className=" w-1/3 pt-48 pl-14 text-center">
         <h1 className="text-5xl text-left">Hello,<br /> Welcome back</h1>

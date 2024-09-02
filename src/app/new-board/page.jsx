@@ -6,15 +6,15 @@ import { useState } from 'react';
 
 export default function NewBoardPage() {
   const [boardName, setBoardName] = useState('');
-  const [boardCreated , setBoardCreated] = useState(false);
+  const [boardCreating , setBoardCreating] = useState(false);
   const router = useRouter()
 
 
   async function handleNewBoardSubmit(event) {
     event.preventDefault(); 
     // console.log(boardName);
+    setBoardCreating(true);
     const roomInfo = await createBoard(boardName);
-    setBoardCreated((prev)=>!prev);
     // console.log("created board")
     // console.log(roomInfo,roomInfo.id);
     if (roomInfo) {
@@ -37,7 +37,15 @@ export default function NewBoardPage() {
           value={boardName}
           onChange={handleInputChange}
         />
-        <button type="submit" disabled={boardCreated} className="bg-[#4A5696] text-white p-2 px-4 border-2 rounded-xl mt-4 w-full">Create board</button>
+        {!boardCreating ? (
+          <button type="submit" className="bg-[#4A5696] text-white p-2 px-4 border-2 rounded-xl mt-4 w-full">
+            Create board
+          </button>
+      ) : (
+        <button disabled className="bg-[#666c8e] text-white p-2 px-4 border-2 rounded-xl mt-4 w-full">
+            Creating
+          </button>
+      )}
       </form>
     </div>
   );

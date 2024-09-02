@@ -24,7 +24,7 @@ export default function NewColumnForm() {
     }
   }
   return (
-    <form onSubmit={handleNewColumn} className=" w-1/3 rounded-lg">
+    <form onSubmit={handleNewColumn} className=" w-1/3 rounded-lg mb-2 pb-2">
       <div className="flex items-center">
         <label className="flex-shrink-0 mr-2">
           <span className="text-gray-600 block">Column name:</span>
