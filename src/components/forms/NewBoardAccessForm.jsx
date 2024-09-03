@@ -33,6 +33,7 @@ export default function NewBoardAccess({ boardId }) {
         name="email" 
         value={email}
         onChange={handleInputChange} 
+        required
       />
       <button className="w-full mt-2 bg-[#4A5696] p-2 px-4 border-2 rounder-xl " type="submit">Save</button>
     </form>

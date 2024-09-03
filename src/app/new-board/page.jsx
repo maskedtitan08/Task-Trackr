@@ -36,6 +36,7 @@ export default function NewBoardPage() {
           placeholder="board name"
           value={boardName}
           onChange={handleInputChange}
+          required
         />
         {!boardCreating ? (
           <button type="submit" className="bg-[#4A5696] text-white p-2 px-4 border-2 rounded-xl mt-4 w-full">

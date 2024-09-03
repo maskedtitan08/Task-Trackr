@@ -33,6 +33,7 @@ export default function NewColumnForm() {
           type="text"
           placeholder="New column name"
           className="flex-grow p-2 border rounded-md "
+          required
         />
         <button type="submit" className="bg-[#4A5696] text-white p-2 px-4 border-2 rounded-xl border-white ml-2">
           Create
