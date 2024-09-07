@@ -7,6 +7,7 @@ import { liveblocksClient } from "@/lib/liveblocksClient";
 import { getUserEmail } from "@/lib/userClient";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import AccessDenied from "@/components/views/AccessDenied"
 import Link from "next/link";
 
 export default async function BoardSettings({ params }) {
@@ -14,7 +15,13 @@ export default async function BoardSettings({ params }) {
   const boardInfo = await liveblocksClient.getRoom(boardId);
   const userEmail = await getUserEmail();
   if (!boardInfo.usersAccesses[userEmail]) {
-    return 'Access denied';
+    // return 'Access denied';
+    return (
+      <div>
+        <AccessDenied />
+      </div>
+       
+    );
   }
   return (
     <div className="m-7">
